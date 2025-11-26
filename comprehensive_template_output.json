@@ -1,0 +1,780 @@
+{
+  "template_id": "catalog_integrated_master_v1",
+  "name": "Catalog-Integrated Master Template",
+  "description": "Master template built from 3 documents using comprehensive catalog",
+  "doc_type": "comprehensive_document",
+  "output_format": "pptx",
+  "catalog_integration": {
+    "catalog_id": "document_elements_catalog_v1",
+    "catalog_version": "1.0",
+    "catalog_name": "Complete Document Elements Master Template",
+    "coverage_analysis": {
+      "total_elements_detected": 23,
+      "elements_mapped_to_catalog": 10,
+      "elements_unmapped": 13,
+      "coverage_percentage": 43.5,
+      "mapped_elements": [
+        "title",
+        "subtitle",
+        "date_created",
+        "scope",
+        "data_analysis",
+        "title",
+        "subtitle",
+        "key_recommendations",
+        "action_plan",
+        "title"
+      ],
+      "unmapped_elements": [
+        "author",
+        "executive_summary",
+        "table_of_contents",
+        "purpose",
+        "heading",
+        "paragraph",
+        "chart",
+        "references",
+        "contact_information",
+        "heading",
+        "paragraph",
+        "heading",
+        "paragraph"
+      ],
+      "catalog_total_elements": 102
+    },
+    "mapped_elements": 10,
+    "unmapped_elements": 13
+  },
+  "analysis_summary": {
+    "total_documents": 3,
+    "total_pages": 11,
+    "common_elements": 4,
+    "unique_elements": 16,
+    "document_structure": {
+      "doc_1": {
+        "total_pages": 6,
+        "page_roles": [
+          "cover",
+          "front_matter",
+          "introduction",
+          "main_content",
+          "analysis",
+          "end_matter"
+        ],
+        "element_categories": [
+          "main_body",
+          "analysis",
+          "end_matter",
+          "front_matter",
+          "supporting",
+          "metadata"
+        ],
+        "has_front_matter": true,
+        "has_end_matter": true,
+        "has_analysis": true,
+        "has_recommendations": false
+      },
+      "doc_2": {
+        "total_pages": 3,
+        "page_roles": [
+          "cover",
+          "main_content",
+          "recommendations"
+        ],
+        "element_categories": [
+          "recommendations",
+          "metadata",
+          "main_body"
+        ],
+        "has_front_matter": false,
+        "has_end_matter": false,
+        "has_analysis": false,
+        "has_recommendations": true
+      },
+      "doc_3": {
+        "total_pages": 2,
+        "page_roles": [
+          "cover",
+          "main_content"
+        ],
+        "element_categories": [
+          "metadata",
+          "main_body"
+        ],
+        "has_front_matter": false,
+        "has_end_matter": false,
+        "has_analysis": false,
+        "has_recommendations": false
+      }
+    }
+  },
+  "document_metadata": {},
+  "document_fields": [
+    {
+      "field_id": "company_name",
+      "label": "Company Name",
+      "data_type": "rich_text",
+      "required": true,
+      "pii_type": "NONE",
+      "category": "main_body",
+      "importance": "critical"
+    },
+    {
+      "field_id": "company_tagline",
+      "label": "Company Tagline",
+      "data_type": "string",
+      "required": false,
+      "pii_type": "NONE",
+      "category": "metadata",
+      "importance": "important"
+    }
+  ],
+  "common_elements": [
+    {
+      "element_type": "title",
+      "element_category": "metadata",
+      "frequency": 3,
+      "total_occurrences": 3,
+      "percentage": 100.0
+    },
+    {
+      "element_type": "heading",
+      "element_category": "main_body",
+      "frequency": 3,
+      "total_occurrences": 3,
+      "percentage": 100.0
+    },
+    {
+      "element_type": "paragraph",
+      "element_category": "main_body",
+      "frequency": 3,
+      "total_occurrences": 3,
+      "percentage": 100.0
+    },
+    {
+      "element_type": "subtitle",
+      "element_category": "metadata",
+      "frequency": 2,
+      "total_occurrences": 2,
+      "percentage": 66.66666666666666
+    }
+  ],
+  "element_frequency": {
+    "title": {
+      "total_count": 3,
+      "document_count": 3,
+      "document_percentage": 100.0,
+      "categories": [
+        "metadata"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "ORG_NAME"
+      ]
+    },
+    "subtitle": {
+      "total_count": 2,
+      "document_count": 2,
+      "document_percentage": 66.66666666666666,
+      "categories": [
+        "metadata"
+      ],
+      "importance_levels": [
+        "important"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "author": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "metadata"
+      ],
+      "importance_levels": [
+        "optional"
+      ],
+      "positions": [
+        "bottom"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "date_created": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "metadata"
+      ],
+      "importance_levels": [
+        "supplementary"
+      ],
+      "positions": [
+        "bottom"
+      ],
+      "pii_types": [
+        "DATE"
+      ]
+    },
+    "executive_summary": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "front_matter"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "table_of_contents": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "front_matter"
+      ],
+      "importance_levels": [
+        "important"
+      ],
+      "positions": [
+        "middle"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "purpose": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "main_body"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "scope": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "main_body"
+      ],
+      "importance_levels": [
+        "important"
+      ],
+      "positions": [
+        "middle"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "heading": {
+      "total_count": 3,
+      "document_count": 3,
+      "document_percentage": 100.0,
+      "categories": [
+        "main_body"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "paragraph": {
+      "total_count": 3,
+      "document_count": 3,
+      "document_percentage": 100.0,
+      "categories": [
+        "main_body"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "middle"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "data_analysis": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "analysis"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "chart": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "supporting"
+      ],
+      "importance_levels": [
+        "important"
+      ],
+      "positions": [
+        "middle"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "references": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "end_matter"
+      ],
+      "importance_levels": [
+        "supplementary"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "contact_information": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "end_matter"
+      ],
+      "importance_levels": [
+        "important"
+      ],
+      "positions": [
+        "bottom"
+      ],
+      "pii_types": [
+        "EMAIL"
+      ]
+    },
+    "key_recommendations": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "recommendations"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "top"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    },
+    "action_plan": {
+      "total_count": 1,
+      "document_count": 1,
+      "document_percentage": 33.33333333333333,
+      "categories": [
+        "recommendations"
+      ],
+      "importance_levels": [
+        "critical"
+      ],
+      "positions": [
+        "middle"
+      ],
+      "pii_types": [
+        "NONE"
+      ]
+    }
+  },
+  "catalog_based_elements": [],
+  "pages": [
+    {
+      "page_index": 1,
+      "page_type": "cover",
+      "page_role": "cover",
+      "title": "Cover Page",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 3,
+      "blocks": [
+        {
+          "block_id": "cover_block_1",
+          "type": "title",
+          "category": "metadata",
+          "importance": "critical",
+          "position_hint": "top",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100.0,
+            "total_occurrences": 3
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "company_name",
+            "label": "Company Name",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "ORG_NAME",
+            "category": "metadata",
+            "importance": "critical"
+          }
+        },
+        {
+          "block_id": "cover_block_2",
+          "type": "subtitle",
+          "category": "metadata",
+          "importance": "important",
+          "position_hint": "top",
+          "content_mode": "dynamic",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 66.66666666666666,
+            "total_occurrences": 2
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "company_tagline",
+            "label": "Company Tagline",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "NONE",
+            "category": "metadata",
+            "importance": "important"
+          }
+        },
+        {
+          "block_id": "cover_block_3",
+          "type": "author",
+          "category": "metadata",
+          "importance": "optional",
+          "position_hint": "bottom",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Corporate Communications Team",
+          "field_schema": null
+        },
+        {
+          "block_id": "cover_block_4",
+          "type": "date_created",
+          "category": "metadata",
+          "importance": "supplementary",
+          "position_hint": "bottom",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "March 2024",
+          "field_schema": null
+        }
+      ],
+      "minimal": false
+    },
+    {
+      "page_index": 2,
+      "page_type": "front_matter",
+      "page_role": "front_matter",
+      "title": "Front Matter",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 1,
+      "blocks": [
+        {
+          "block_id": "front_matter_block_1",
+          "type": "executive_summary",
+          "category": "front_matter",
+          "importance": "critical",
+          "position_hint": "top",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Acme Health Inc. is a leading healthcare technology company...",
+          "field_schema": null
+        },
+        {
+          "block_id": "front_matter_block_2",
+          "type": "table_of_contents",
+          "category": "front_matter",
+          "importance": "important",
+          "position_hint": "middle",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "About Us Our Services Team Contact",
+          "field_schema": null
+        }
+      ],
+      "minimal": false
+    },
+    {
+      "page_index": 3,
+      "page_type": "introduction",
+      "page_role": "introduction",
+      "title": "Introduction",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 1,
+      "blocks": [
+        {
+          "block_id": "introduction_block_1",
+          "type": "purpose",
+          "category": "main_body",
+          "importance": "critical",
+          "position_hint": "top",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "This document provides an overview of our company...",
+          "field_schema": null
+        },
+        {
+          "block_id": "introduction_block_2",
+          "type": "scope",
+          "category": "main_body",
+          "importance": "important",
+          "position_hint": "middle",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Covers our services, team, and contact information",
+          "field_schema": null
+        }
+      ],
+      "minimal": false
+    },
+    {
+      "page_index": 7,
+      "page_type": "main_content",
+      "page_role": "main_content",
+      "title": "Main Content",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 3,
+      "blocks": [
+        {
+          "block_id": "main_content_block_1",
+          "type": "heading",
+          "category": "main_body",
+          "importance": "critical",
+          "position_hint": "top",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100.0,
+            "total_occurrences": 3
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "main_content_heading_1",
+            "label": "Main Content Heading 1",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE",
+            "category": "main_body",
+            "importance": "critical"
+          }
+        },
+        {
+          "block_id": "main_content_block_2",
+          "type": "paragraph",
+          "category": "main_body",
+          "importance": "critical",
+          "position_hint": "middle",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100.0,
+            "total_occurrences": 3
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "company_name",
+            "label": "Company Name",
+            "data_type": "rich_text",
+            "required": true,
+            "pii_type": "NONE",
+            "category": "main_body",
+            "importance": "critical"
+          }
+        }
+      ],
+      "minimal": false
+    },
+    {
+      "page_index": 8,
+      "page_type": "analysis",
+      "page_role": "analysis",
+      "title": "Analysis & Findings",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 1,
+      "blocks": [
+        {
+          "block_id": "analysis_block_1",
+          "type": "data_analysis",
+          "category": "analysis",
+          "importance": "critical",
+          "position_hint": "top",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Market Analysis: Healthcare IT market growing at 15% CAGR",
+          "field_schema": null
+        }
+      ],
+      "minimal": false
+    },
+    {
+      "page_index": 16,
+      "page_type": "recommendations",
+      "page_role": "recommendations",
+      "title": "Recommendations",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 1,
+      "blocks": [
+        {
+          "block_id": "recommendations_block_1",
+          "type": "key_recommendations",
+          "category": "recommendations",
+          "importance": "critical",
+          "position_hint": "top",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Strategic Recommendations for Digital Transformation",
+          "field_schema": null
+        },
+        {
+          "block_id": "recommendations_block_2",
+          "type": "action_plan",
+          "category": "recommendations",
+          "importance": "critical",
+          "position_hint": "middle",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Phase 1: Assessment Phase 2: Implementation Phase 3: Optimization",
+          "field_schema": null
+        }
+      ],
+      "minimal": false
+    },
+    {
+      "page_index": 20,
+      "page_type": "end_matter",
+      "page_role": "end_matter",
+      "title": "End Matter",
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 1,
+      "blocks": [
+        {
+          "block_id": "end_matter_block_1",
+          "type": "references",
+          "category": "end_matter",
+          "importance": "supplementary",
+          "position_hint": "top",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Healthcare IT Report 2024 Industry Analysis Q1",
+          "field_schema": null
+        },
+        {
+          "block_id": "end_matter_block_2",
+          "type": "contact_information",
+          "category": "end_matter",
+          "importance": "important",
+          "position_hint": "bottom",
+          "content_mode": "static",
+          "optional": true,
+          "frequency_info": {
+            "document_percentage": 33.33333333333333,
+            "total_occurrences": 1
+          },
+          "static_text": "Contact: [EMAIL] | [PHONE]",
+          "field_schema": null
+        }
+      ],
+      "minimal": false
+    }
+  ]
+}

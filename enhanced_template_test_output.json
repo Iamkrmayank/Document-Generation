@@ -1,0 +1,81 @@
+{
+  "template_id": "enhanced_master_v1",
+  "name": "Enhanced Master Template with Descriptions",
+  "pages": [
+    {
+      "page_type": "metrics",
+      "title": "Performance Metrics",
+      "blocks": [
+        {
+          "block_id": "metrics_revenue_1",
+          "type": "charts_graphs",
+          "description": "Comprehensive revenue analysis showing growth trends and forecasts",
+          "content_mode": "dynamic",
+          "chart_data": {
+            "chart_type": "line",
+            "title": "Revenue Trend Analysis",
+            "description": "5-year revenue growth with projections",
+            "data": [
+              {
+                "name": "2020",
+                "value": "15M",
+                "unit": "USD"
+              },
+              {
+                "name": "2021",
+                "value": "18M",
+                "unit": "USD"
+              },
+              {
+                "name": "2022",
+                "value": "22M",
+                "unit": "USD"
+              },
+              {
+                "name": "2023",
+                "value": "27M",
+                "unit": "USD"
+              },
+              {
+                "name": "2024",
+                "value": "33M",
+                "unit": "USD"
+              }
+            ]
+          },
+          "figure_data": null
+        },
+        {
+          "block_id": "metrics_org_2",
+          "type": "figures_images",
+          "description": "Visual representation of company organizational structure",
+          "content_mode": "static",
+          "chart_data": null,
+          "figure_data": {
+            "figure_type": "diagram",
+            "title": "Company Structure",
+            "description": "Hierarchical organization chart with key personnel",
+            "elements": [
+              {
+                "name": "Board",
+                "value": "5 Board Members"
+              },
+              {
+                "name": "Executive",
+                "value": "3 C-Level Executives"
+              },
+              {
+                "name": "Management",
+                "value": "12 Department Heads"
+              },
+              {
+                "name": "Staff",
+                "value": "150 Employees"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

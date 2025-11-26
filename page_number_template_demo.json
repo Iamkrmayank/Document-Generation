@@ -1,0 +1,342 @@
+{
+  "template_id": "page_number_based_master_v1",
+  "name": "Page Number-Based Master Template",
+  "description": "Master template built from 3 documents using page number approach",
+  "doc_type": "comprehensive_document",
+  "output_format": "pptx",
+  "catalog_integration": {
+    "catalog_id": "document_elements_catalog_v1",
+    "catalog_version": "1.0",
+    "catalog_name": "Complete Document Elements Master Template",
+    "coverage_analysis": {
+      "total_elements_detected": 22,
+      "elements_mapped_to_catalog": 22,
+      "elements_unmapped": 0,
+      "coverage_percentage": 100.0,
+      "mapped_elements": [
+        "title",
+        "subtitle",
+        "organization_logo",
+        "executive_summary_text",
+        "charts_graphs",
+        "paragraphs",
+        "sections_h1",
+        "content_tables",
+        "figures_images",
+        "title",
+        "subtitle",
+        "organization_logo",
+        "executive_summary_text",
+        "charts_graphs",
+        "bullet_points",
+        "sections_h1",
+        "charts_graphs",
+        "paragraphs",
+        "title",
+        "subtitle",
+        "executive_summary_text",
+        "charts_graphs"
+      ],
+      "unmapped_elements": [],
+      "catalog_total_elements": 102
+    },
+    "mapped_elements": 22,
+    "unmapped_elements": 0
+  },
+  "analysis_summary": {
+    "total_documents": 3,
+    "total_pages": 8,
+    "common_elements": 0,
+    "unique_elements": 0,
+    "document_structure": {
+      "total_documents": 3,
+      "total_pages": 8,
+      "page_distribution": {}
+    }
+  },
+  "document_metadata": {},
+  "document_fields": [],
+  "common_elements": [],
+  "element_frequency": {},
+  "pages": [
+    {
+      "page_number": 1,
+      "page_title": "TechCorp Annual Report 2024",
+      "page_role": "cover_introduction",
+      "content_types": [
+        "headings"
+      ],
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 3,
+      "blocks": [
+        {
+          "block_id": "page_block_title_1",
+          "type": "title",
+          "description": "Main company document title",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "title",
+            "label": "Title",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_subtitle_2",
+          "type": "subtitle",
+          "description": "Company tagline and year",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "subtitle",
+            "label": "Subtitle",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_organization_logo_3",
+          "type": "organization_logo",
+          "description": "Company brand logo",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "organization_logo",
+            "label": "Organization Logo",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "chart_data": null,
+          "figure_data": null
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "page_title": "Executive Summary",
+      "page_role": "executive_summary",
+      "content_types": [
+        "charts",
+        "lists",
+        "text"
+      ],
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 3,
+      "blocks": [
+        {
+          "block_id": "page_block_executive_summary_text_1",
+          "type": "executive_summary_text",
+          "description": "Executive summary of company performance",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "executive_summary_text",
+            "label": "Executive Summary Text",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_charts_graphs_2",
+          "type": "charts_graphs",
+          "description": "Financial performance visualization",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "charts_graphs",
+            "label": "Charts Graphs",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "chart_data": {
+            "title": "Revenue Growth 2024",
+            "data": [
+              {
+                "name": "Q1",
+                "value": "25M",
+                "unit": "USD"
+              }
+            ]
+          },
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_paragraphs_3",
+          "type": "paragraphs",
+          "description": "Detailed business explanation",
+          "content_mode": "static",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": "Our strategic initiatives...",
+          "field_schema": null,
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_bullet_points_4",
+          "type": "bullet_points",
+          "description": "Major accomplishments list",
+          "content_mode": "static",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": "Key Achievement 1 Key Achievement 2",
+          "field_schema": null,
+          "chart_data": null,
+          "figure_data": null
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "page_title": "Market Analysis",
+      "page_role": "data_visualization",
+      "content_types": [
+        "charts",
+        "figures",
+        "headings",
+        "tables"
+      ],
+      "required": true,
+      "frequency_percentage": 100.0,
+      "document_count": 2,
+      "blocks": [
+        {
+          "block_id": "page_block_sections_h1_1",
+          "type": "sections_h1",
+          "description": "Section heading for market data",
+          "content_mode": "dynamic",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": null,
+          "field_schema": {
+            "field_id": "sections_h1",
+            "label": "Sections H1",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_content_tables_2",
+          "type": "content_tables",
+          "description": "Tabular market data",
+          "content_mode": "static",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": "Market Share Table",
+          "field_schema": null,
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_figures_images_3",
+          "type": "figures_images",
+          "description": "Visual market analysis",
+          "content_mode": "static",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": "Market Position Diagram",
+          "field_schema": null,
+          "chart_data": null,
+          "figure_data": {
+            "title": "Market Position",
+            "elements": [
+              {
+                "name": "Market Share",
+                "value": "23%"
+              }
+            ]
+          }
+        },
+        {
+          "block_id": "page_block_charts_graphs_4",
+          "type": "charts_graphs",
+          "description": "Financial data visualization",
+          "content_mode": "static",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": "Financial Chart",
+          "field_schema": null,
+          "chart_data": null,
+          "figure_data": null
+        },
+        {
+          "block_id": "page_block_paragraphs_5",
+          "type": "paragraphs",
+          "description": "Financial performance narrative",
+          "content_mode": "static",
+          "optional": false,
+          "frequency_info": {
+            "document_percentage": 100,
+            "total_occurrences": 1
+          },
+          "static_text": "Financial analysis shows...",
+          "field_schema": null,
+          "chart_data": null,
+          "figure_data": null
+        }
+      ]
+    }
+  ],
+  "total_pages": 3,
+  "max_page_number": 3
+}

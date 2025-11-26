@@ -1,0 +1,770 @@
+{
+  "template_id": "document_elements_catalog_v1",
+  "name": "Complete Document Elements Master Template",
+  "description": "Catalog of all structured document elements, based on standard document anatomy.",
+  "version": "1.0",
+  "created_date": "2024-11-26",
+  "sections": {
+    "document_identity_and_metadata": {
+      "title": {
+        "field_id": "title",
+        "label": "Title",
+        "description": "Main name of the document (clear, specific, descriptive).",
+        "data_type": "string",
+        "required": true,
+        "pii_type": "NONE"
+      },
+      "subtitle": {
+        "field_id": "subtitle",
+        "label": "Subtitle",
+        "description": "Optional secondary title that adds clarity.",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "NONE"
+      },
+      "authors": {
+        "field_id": "authors",
+        "label": "Author(s)",
+        "description": "Names of creators or contributors.",
+        "data_type": "list<string>",
+        "required": false,
+        "pii_type": "PERSON_NAME"
+      },
+      "organization_department": {
+        "field_id": "organization_department",
+        "label": "Organization/Department",
+        "description": "Entity that produced the document.",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "ORG_NAME"
+      },
+      "version_number": {
+        "field_id": "version_number",
+        "label": "Version Number",
+        "description": "Version of the document (e.g., v1.0, v2.1).",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "NONE"
+      },
+      "document_id": {
+        "field_id": "document_id",
+        "label": "Document ID",
+        "description": "Internal tracking identifier.",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "NONE"
+      },
+      "date_created": {
+        "field_id": "date_created",
+        "label": "Date Created",
+        "description": "Original creation date.",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "DATE"
+      },
+      "last_updated_date": {
+        "field_id": "last_updated_date",
+        "label": "Last Updated Date",
+        "description": "Most recent revision date.",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "DATE"
+      },
+      "confidentiality_level": {
+        "field_id": "confidentiality_level",
+        "label": "Confidentiality Level",
+        "description": "Public / Internal / Confidential / Restricted.",
+        "data_type": "string",
+        "required": false,
+        "pii_type": "NONE"
+      }
+    },
+  
+      "front_matter": {
+        "cover_page": {
+          "title": {
+            "field_id": "cover_title",
+            "label": "Cover Page Title",
+            "description": "Title as it appears on the cover page.",
+            "data_type": "string",
+            "required": true,
+            "pii_type": "NONE"
+          },
+          "subtitle": {
+            "field_id": "cover_subtitle",
+            "label": "Cover Page Subtitle",
+            "description": "Subtitle on the cover page.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "author": {
+            "field_id": "cover_author",
+            "label": "Cover Author",
+            "description": "Author name listed on the cover.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "PERSON_NAME"
+          },
+          "organization_logo": {
+            "field_id": "organization_logo",
+            "label": "Organization Logo",
+            "description": "Logo image or description on the cover.",
+            "data_type": "image_or_text",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "date": {
+            "field_id": "cover_date",
+            "label": "Cover Date",
+            "description": "Date shown on the cover.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "DATE"
+          },
+          "version": {
+            "field_id": "cover_version",
+            "label": "Cover Version",
+            "description": "Version shown on the cover page.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "NONE"
+          }
+        },
+  
+        "preface": {
+          "background": {
+            "field_id": "preface_background",
+            "label": "Preface Background",
+            "description": "Background of why this document exists.",
+            "data_type": "rich_text",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "need_reason": {
+            "field_id": "preface_need_reason",
+            "label": "Need / Reason",
+            "description": "Why the document was created.",
+            "data_type": "rich_text",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "audience": {
+            "field_id": "preface_audience",
+            "label": "Intended Audience",
+            "description": "Who this document is for.",
+            "data_type": "rich_text",
+            "required": false,
+            "pii_type": "NONE"
+          }
+        },
+  
+        "acknowledgements": {
+          "text": {
+            "field_id": "acknowledgements_text",
+            "label": "Acknowledgements Text",
+            "description": "Thank you note and recognition.",
+            "data_type": "rich_text",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "contributors": {
+            "field_id": "acknowledgements_contributors",
+            "label": "Contributors",
+            "description": "List of people/organizations acknowledged.",
+            "data_type": "list<string>",
+            "required": false,
+            "pii_type": "PERSON_NAME"
+          }
+        },
+  
+        "table_of_contents": {
+          "entries": {
+            "field_id": "table_of_contents_entries",
+            "label": "Table of Contents",
+            "description": "All headings and corresponding page numbers.",
+            "data_type": "list<object>",
+            "schema": {
+              "heading": "string",
+              "page": "number"
+            },
+            "required": false,
+            "pii_type": "NONE"
+          }
+        },
+  
+        "list_of_figures": {
+          "entries": {
+            "field_id": "list_of_figures_entries",
+            "label": "List of Figures",
+            "description": "All images/diagrams with page numbers.",
+            "data_type": "list<object>"
+          }
+        },
+  
+        "list_of_tables": {
+          "entries": {
+            "field_id": "list_of_tables_entries",
+            "label": "List of Tables",
+            "description": "All tables with page numbers.",
+            "data_type": "list<object>"
+          }
+        },
+  
+        "executive_summary_abstract": {
+          "summary_text": {
+            "field_id": "executive_summary_text",
+            "label": "Executive Summary / Abstract Text",
+            "description": "Standalone snapshot of the entire document (1–3 paragraphs).",
+            "data_type": "rich_text",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "key_points": {
+            "field_id": "executive_summary_key_points",
+            "label": "Executive Summary Key Points",
+            "description": "Bullet points capturing the main takeaways.",
+            "data_type": "list<string>",
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "recommendations": {
+            "field_id": "executive_summary_recommendations",
+            "label": "Executive Summary Recommendations",
+            "description": "High-level recommendations from the document.",
+            "data_type": "list<string>",
+            "required": false,
+            "pii_type": "NONE"
+          }
+        }
+      },
+  
+      "introduction_section": {
+        "purpose_objective": {
+          "field_id": "purpose_objective",
+          "label": "Purpose / Objective",
+          "description": "What this document aims to achieve.",
+          "data_type": "rich_text"
+        },
+        "scope": {
+          "field_id": "scope",
+          "label": "Scope",
+          "description": "What is included and excluded.",
+          "data_type": "rich_text"
+        },
+        "background_context": {
+          "field_id": "background_context",
+          "label": "Background / Context",
+          "description": "Context required to understand the document.",
+          "data_type": "rich_text"
+        },
+        "problem_statement": {
+          "field_id": "problem_statement",
+          "label": "Problem Statement",
+          "description": "Problem being addressed (if applicable).",
+          "data_type": "rich_text"
+        },
+        "audience": {
+          "field_id": "introduction_audience",
+          "label": "Audience",
+          "description": "Who the main readers are.",
+          "data_type": "rich_text"
+        },
+        "assumptions": {
+          "field_id": "assumptions",
+          "label": "Assumptions",
+          "description": "List of assumptions made in the document.",
+          "data_type": "list<string>"
+        },
+        "dependencies": {
+          "field_id": "dependencies",
+          "label": "Dependencies",
+          "description": "Dependencies or prerequisites.",
+          "data_type": "list<string>"
+        }
+      },
+  
+      "main_body_core_content": {
+        "structure": {
+          "sections_h1": {
+            "field_id": "sections_h1",
+            "label": "Sections (H1)",
+            "description": "Top-level sections of the main body.",
+            "data_type": "list<object>"
+          },
+          "subsections_h2": {
+            "field_id": "subsections_h2",
+            "label": "Subsections (H2)",
+            "description": "Subsections under each section.",
+            "data_type": "list<object>"
+          },
+          "sub_subsections_h3": {
+            "field_id": "sub_subsections_h3",
+            "label": "Sub-subsections (H3)",
+            "description": "Deeper level subsections.",
+            "data_type": "list<object>"
+          },
+          "paragraphs": {
+            "field_id": "paragraphs",
+            "label": "Paragraphs",
+            "description": "Atomic units of narrative text, logically organized.",
+            "data_type": "list<rich_text>"
+          }
+        },
+  
+        "content_types": {
+          "explanations": {
+            "field_id": "explanations",
+            "label": "Explanations",
+            "description": "Explanatory text sections.",
+            "data_type": "list<rich_text>"
+          },
+          "definitions": {
+            "field_id": "definitions",
+            "label": "Definitions",
+            "description": "Formal definitions of terms.",
+            "data_type": "list<object>",
+            "schema": {
+              "term": "string",
+              "definition": "string"
+            },
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "case_studies_examples": {
+            "field_id": "case_studies_examples",
+            "label": "Case Studies / Examples",
+            "description": "Concrete scenarios or examples.",
+            "data_type": "list<object>"
+          },
+          "procedures_steps": {
+            "field_id": "procedures_steps",
+            "label": "Procedures / Steps",
+            "description": "Step-by-step instructions.",
+            "data_type": "list<object>"
+          },
+          "workflows": {
+            "field_id": "workflows",
+            "label": "Workflows",
+            "description": "Process or workflow descriptions.",
+            "data_type": "list<object>"
+          },
+          "policies": {
+            "field_id": "policies",
+            "label": "Policies",
+            "description": "Policy statements (for policy documents).",
+            "data_type": "list<object>"
+          },
+          "technical_specifications": {
+            "field_id": "technical_specifications",
+            "label": "Technical Specifications",
+            "description": "Structured technical details.",
+            "data_type": "list<object>"
+          },
+          "diagrams": {
+            "field_id": "content_diagrams",
+            "label": "Diagrams",
+            "description": "Visual schematic representations.",
+            "data_type": "list<object>"
+          },
+          "tables": {
+            "field_id": "content_tables",
+            "label": "Tables",
+            "description": "Tabular data embedded in main body.",
+            "data_type": "list<object>"
+          },
+          "charts_graphs": {
+            "field_id": "charts_graphs",
+            "label": "Charts / Graphs",
+            "description": "Visual representation of data (bar, pie, line, etc.).",
+            "data_type": "list<object>",
+            "schema": {
+              "chart_type": "string",
+              "title": "string",
+              "data_table": {
+                "columns": ["string"],
+                "rows": [["string"]]
+              },
+              "chart_config": {
+                "label_column": "string",
+                "value_column": "string"
+              }
+            },
+            "required": false,
+            "pii_type": "NONE"
+          },
+          "screenshots": {
+            "field_id": "screenshots",
+            "label": "Screenshots",
+            "description": "Screen captures used for explanation.",
+            "data_type": "list<object>"
+          },
+          "callouts_notes": {
+            "field_id": "callouts_notes",
+            "label": "Callouts – Notes",
+            "description": "Special note callouts.",
+            "data_type": "list<string>"
+          },
+          "callouts_tips": {
+            "field_id": "callouts_tips",
+            "label": "Callouts – Tips",
+            "description": "Helpful tips.",
+            "data_type": "list<string>"
+          },
+          "callouts_warnings": {
+            "field_id": "callouts_warnings",
+            "label": "Callouts – Warnings",
+            "description": "Warnings about risks.",
+            "data_type": "list<string>"
+          },
+          "callouts_important": {
+            "field_id": "callouts_important",
+            "label": "Callouts – Important",
+            "description": "Important highlighted content.",
+            "data_type": "list<string>"
+          }
+        },
+  
+        "lists": {
+          "bullet_points": {
+            "field_id": "bullet_points",
+            "label": "Bullet Points",
+            "description": "Unordered lists used to highlight key items.",
+            "data_type": "list<object>"
+          },
+          "numbered_lists": {
+            "field_id": "numbered_lists",
+            "label": "Numbered Lists",
+            "description": "Ordered lists where sequence or steps matter.",
+            "data_type": "list<object>"
+          },
+          "checklists": {
+            "field_id": "checklists",
+            "label": "Checklists",
+            "description": "Lists that can be checked off.",
+            "data_type": "list<object>"
+          },
+          "task_lists": {
+            "field_id": "task_lists",
+            "label": "Task Lists",
+            "description": "Lists of tasks or action items.",
+            "data_type": "list<object>"
+          }
+        }
+      },
+  
+      "supporting_elements": {
+        "figures_images": {
+          "field_id": "figures_images",
+          "label": "Figures / Images",
+          "description": "Non-text visual content.",
+          "data_type": "list<object>"
+        },
+        "flowcharts": {
+          "field_id": "flowcharts",
+          "label": "Flowcharts",
+          "description": "Process diagrams with arrows and steps.",
+          "data_type": "list<object>"
+        },
+        "diagrams": {
+          "field_id": "support_diagrams",
+          "label": "Diagrams",
+          "description": "Additional diagrams outside main narrative.",
+          "data_type": "list<object>"
+        },
+        "tables": {
+          "field_id": "support_tables",
+          "label": "Tables",
+          "description": "Supporting tables (e.g., data tables in appendix).",
+          "data_type": "list<object>"
+        },
+        "graphs_charts": {
+          "field_id": "support_graphs_charts",
+          "label": "Graphs / Charts",
+          "description": "Supporting charts/graphs outside main body.",
+          "data_type": "list<object>"
+        },
+        "data_highlights": {
+          "field_id": "data_highlights",
+          "label": "Data Highlights",
+          "description": "Key numerical or statistical highlights.",
+          "data_type": "list<string>"
+        },
+        "equations_math": {
+          "field_id": "equations_math",
+          "label": "Equations / Math",
+          "description": "Mathematical formulas or expressions.",
+          "data_type": "list<object>"
+        },
+        "code_blocks": {
+          "field_id": "code_blocks",
+          "label": "Code Blocks",
+          "description": "Code snippets in technical documents.",
+          "data_type": "list<object>"
+        },
+        "footnotes": {
+          "field_id": "footnotes",
+          "label": "Footnotes",
+          "description": "Footnote references and text.",
+          "data_type": "list<object>"
+        },
+        "hyperlinks": {
+          "field_id": "hyperlinks",
+          "label": "Hyperlinks",
+          "description": "Clickable URLs or cross-references.",
+          "data_type": "list<object>"
+        }
+      },
+  
+      "analysis_and_findings": {
+        "data_analysis": {
+          "field_id": "data_analysis",
+          "label": "Data Analysis",
+          "description": "Analysis of data presented in the document.",
+          "data_type": "rich_text"
+        },
+        "findings_key_insights": {
+          "field_id": "findings_key_insights",
+          "label": "Findings / Key Insights",
+          "description": "Core findings of the document.",
+          "data_type": "list<string>"
+        },
+        "observations": {
+          "field_id": "observations",
+          "label": "Observations",
+          "description": "Important observations.",
+          "data_type": "list<string>"
+        },
+        "patterns_trends": {
+          "field_id": "patterns_trends",
+          "label": "Patterns / Trends",
+          "description": "Trends identified in the data or content.",
+          "data_type": "list<string>"
+        },
+        "interpretation_of_results": {
+          "field_id": "interpretation_of_results",
+          "label": "Interpretation of Results",
+          "description": "Meaning and implications of findings.",
+          "data_type": "rich_text"
+        },
+        "comparisons": {
+          "field_id": "comparisons",
+          "label": "Comparisons",
+          "description": "Comparisons between scenarios, groups, methods, etc.",
+          "data_type": "list<string>"
+        },
+        "limitations": {
+          "field_id": "limitations",
+          "label": "Limitations",
+          "description": "Limitations of the analysis or approach.",
+          "data_type": "list<string>"
+        }
+      },
+  
+      "recommendations_solutions": {
+        "key_recommendations": {
+          "field_id": "key_recommendations",
+          "label": "Key Recommendations",
+          "description": "Main recommended actions.",
+          "data_type": "list<string>"
+        },
+        "action_plan": {
+          "field_id": "action_plan",
+          "label": "Action Plan",
+          "description": "Detailed action plan derived from findings.",
+          "data_type": "rich_text"
+        },
+        "roadmap": {
+          "field_id": "roadmap",
+          "label": "Roadmap",
+          "description": "Timeline or staged plan.",
+          "data_type": "rich_text"
+        },
+        "strategy_outline": {
+          "field_id": "strategy_outline",
+          "label": "Strategy Outline",
+          "description": "High-level strategy structure.",
+          "data_type": "rich_text"
+        },
+        "best_practices": {
+          "field_id": "best_practices",
+          "label": "Best Practices",
+          "description": "Recommended best practices.",
+          "data_type": "list<string>"
+        },
+        "implementation_steps": {
+          "field_id": "implementation_steps",
+          "label": "Implementation Steps",
+          "description": "Concrete steps to implement recommendations.",
+          "data_type": "list<string>"
+        }
+      },
+  
+      "conclusion_closing_section": {
+        "summary_of_key_points": {
+          "field_id": "summary_of_key_points",
+          "label": "Summary of Key Points",
+          "description": "Bullet summary of major points.",
+          "data_type": "list<string>"
+        },
+        "final_conclusion": {
+          "field_id": "final_conclusion",
+          "label": "Final Conclusion",
+          "description": "Overall concluding statement.",
+          "data_type": "rich_text"
+        },
+        "final_insights": {
+          "field_id": "final_insights",
+          "label": "Final Insights",
+          "description": "Final reflections or insights.",
+          "data_type": "list<string>"
+        },
+        "way_forward": {
+          "field_id": "way_forward",
+          "label": "Way Forward",
+          "description": "Future steps or direction.",
+          "data_type": "rich_text"
+        },
+        "closing_statement": {
+          "field_id": "closing_statement",
+          "label": "Closing Statement",
+          "description": "Short closing line.",
+          "data_type": "string"
+        }
+      },
+  
+      "end_matter": {
+        "glossary": {
+          "terms": {
+            "field_id": "glossary_terms",
+            "label": "Glossary Terms",
+            "description": "List of terms and their definitions.",
+            "data_type": "list<object>"
+          }
+        },
+        "references_bibliography": {
+          "books": {
+            "field_id": "references_books",
+            "label": "Books",
+            "description": "Book references.",
+            "data_type": "list<object>"
+          },
+          "articles": {
+            "field_id": "references_articles",
+            "label": "Articles",
+            "description": "Article references.",
+            "data_type": "list<object>"
+          },
+          "websites": {
+            "field_id": "references_websites",
+            "label": "Websites",
+            "description": "Website references.",
+            "data_type": "list<object>"
+          },
+          "research_papers": {
+            "field_id": "references_research_papers",
+            "label": "Research Papers",
+            "description": "Research paper references.",
+            "data_type": "list<object>"
+          },
+          "standards": {
+            "field_id": "references_standards",
+            "label": "Standards",
+            "description": "Standards and norms referenced.",
+            "data_type": "list<object>"
+          }
+        },
+        "appendices": {
+          "raw_data": {
+            "field_id": "appendix_raw_data",
+            "label": "Raw Data",
+            "description": "Raw datasets or logs.",
+            "data_type": "list<object>"
+          },
+          "sample_forms": {
+            "field_id": "appendix_sample_forms",
+            "label": "Sample Forms",
+            "description": "Example forms.",
+            "data_type": "list<object>"
+          },
+          "screenshots": {
+            "field_id": "appendix_screenshots",
+            "label": "Appendix Screenshots",
+            "description": "Screenshots included as supporting material.",
+            "data_type": "list<object>"
+          },
+          "large_tables": {
+            "field_id": "appendix_large_tables",
+            "label": "Large Tables",
+            "description": "Big tables moved from main body.",
+            "data_type": "list<object>"
+          },
+          "supplementary_details": {
+            "field_id": "appendix_supplementary_details",
+            "label": "Supplementary Details",
+            "description": "Extra detail that supports main content.",
+            "data_type": "list<object>"
+          }
+        },
+        "index": {
+          "entries": {
+            "field_id": "index_entries",
+            "label": "Index Entries",
+            "description": "Alphabetically arranged keywords and page numbers.",
+            "data_type": "list<object>"
+          }
+        },
+        "contact_information": {
+          "author": {
+            "field_id": "contact_author",
+            "label": "Contact Author",
+            "description": "Contact person name.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "PERSON_NAME"
+          },
+          "organization": {
+            "field_id": "contact_organization",
+            "label": "Contact Organization",
+            "description": "Organization to contact.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "ORG_NAME"
+          },
+          "support_email": {
+            "field_id": "support_email",
+            "label": "Support Email",
+            "description": "Support or contact email.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "EMAIL"
+          },
+          "phone": {
+            "field_id": "contact_phone",
+            "label": "Contact Phone",
+            "description": "Contact phone number.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "PHONE"
+          },
+          "address": {
+            "field_id": "contact_address",
+            "label": "Contact Address",
+            "description": "Physical address.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "ADDRESS"
+          },
+          "website": {
+            "field_id": "contact_website",
+            "label": "Website",
+            "description": "Organization website URL.",
+            "data_type": "string",
+            "required": false,
+            "pii_type": "URL"
+          }
+        }
+      }
+    }
+  }
+  
