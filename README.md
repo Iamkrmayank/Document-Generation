@@ -1,4 +1,4 @@
-# Master Template Generation Tool 🎯
+# Master Template Generation Tool 
 
 A powerful Streamlit application that analyzes 2-3 company profile documents (PDF/PPTX) and generates a comprehensive master template using AWS Bedrock Claude Sonnet 4.5 and a comprehensive document elements catalog.
 
